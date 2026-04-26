@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bank Recon — Arka Tea Traders Q1 2026</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #f7f8fa;
+    color: #1a202c;
+    padding: 2rem;
+  }
+  header {
+    background: #1a365d;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+  header h1 { font-size: 1.4rem; font-weight: 700; }
+  header p  { font-size: 0.85rem; opacity: .7; margin-top: .3rem; }
+
+  .cards {
+    display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;
+  }
+  .card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    flex: 1 1 180px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  }
+  .card-type  { font-size: .75rem; font-weight: 700; letter-spacing: .05em; }
+  .card-title { font-size: .85rem; font-weight: 600; margin: .2rem 0; color: #2d3748; }
+  .card-count { font-size: 2rem; font-weight: 800; line-height: 1; margin: .3rem 0; }
+  .card-desc  { font-size: .72rem; color: #718096; }
+
+  table {
+    width: 100%; border-collapse: collapse;
+    background: #fff; border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+    overflow: hidden;
+    font-size: .82rem;
+  }
+  thead tr { background: #1a365d; color: #fff; }
+  thead th { padding: .6rem .8rem; text-align: left; font-weight: 600; white-space: nowrap; }
+  tbody tr:nth-child(even) { background: #f7f8fa; }
+  tbody tr:hover { background: #ebf4ff; }
+  td { padding: .55rem .8rem; vertical-align: top; border-bottom: 1px solid #e2e8f0; }
+  .num  { text-align: center; font-weight: 700; color: #718096; }
+  .amt  { text-align: right; font-family: monospace; white-space: nowrap; }
+  .desc { max-width: 200px; }
+  .action { font-size: .78rem; color: #2d3748; max-width: 220px; }
+  .badge {
+    display: inline-block;
+    color: #fff;
+    padding: .2rem .55rem;
+    border-radius: 999px;
+    font-size: .72rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .urgent {
+    display: inline-block;
+    background: #fff3cd;
+    color: #856404;
+    font-size: .68rem;
+    font-weight: 600;
+    padding: .1rem .4rem;
+    border-radius: 4px;
+    margin-left: .3rem;
+  }
+  ul.path {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: .75rem;
+    color: #4a5568;
+  }
+  ul.path li::before { content: "→ "; color: #a0aec0; }
+  footer {
+    margin-top: 1.5rem;
+    text-align: right;
+    font-size: .75rem;
+    color: #a0aec0;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>🏦 Bank Reconciliation — Q1 2026</h1>
+    <p>Arka Tea Traders Pvt Ltd &nbsp;|&nbsp; HDFC Current Account &nbsp;|&nbsp; Generated: 26 Apr 2026, 09:20 PM</p>
+  </header>
+
+  <div class="cards">
+        <div class="card" style="border-left:4px solid #e53e3e">
+          <div class="card-type" style="color:#e53e3e">Type A</div>
+          <div class="card-title">Error / Missing Entry</div>
+          <div class="card-count">8</div>
+          <div class="card-desc">Entry present in one system only (excluding timing differences) or amounts differ due to a posting error.</div>
+        </div>
+        <div class="card" style="border-left:4px solid #d69e2e">
+          <div class="card-type" style="color:#d69e2e">Type C</div>
+          <div class="card-title">Timing Difference</div>
+          <div class="card-count">1</div>
+          <div class="card-desc">Entry exists in both systems but clearance lags across the period-end. Disclose in BRS.</div>
+        </div>
+        <div class="card" style="border-left:4px solid #2b6cb0">
+          <div class="card-type" style="color:#2b6cb0">Type D</div>
+          <div class="card-title">Prior-Period / Opening Balance</div>
+          <div class="card-count">1</div>
+          <div class="card-desc">Discrepancy originates before the current quarter. Investigate and post prior-period adjustment.</div>
+        </div>
+        <div class="card" style="border-left:4px solid #276749">
+          <div class="card-type" style="color:#276749">Match</div>
+          <div class="card-title">Matched</div>
+          <div class="card-count">2</div>
+          <div class="card-desc">Transaction matches in both amount and date. No action required.</div>
+        </div></div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th><th>Date</th><th>Description</th>
+        <th>Zoho</th><th>Bank</th>
+        <th>Type</th><th>Label</th>
+        <th>Decision Path</th><th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="num">01</td>
+          <td>01/01/2026</td>
+          <td class="desc">Opening Balance</td>
+          <td class="amt">₹240,000.00</td>
+          <td class="amt">₹247,850.50</td>
+          <td><span class="badge" style="background:#2b6cb0">Type D</span></td>
+          <td>Opening balance mismatch (diff: ₹7,850.50) <span class="urgent">⚠ Urgent</span></td>
+          <td><ul class="path"><li>In bank: YES</li><li>In Zoho: YES</li><li>Prior-period item: YES</li></ul></td>
+          <td class="action">Reconcile prior-quarter closing balance. Post prior-period adjustment journal to correct Zoho opening balance.</td>
+        </tr>
+        <tr>
+          <td class="num">02</td>
+          <td>21/01/2026</td>
+          <td class="desc">ACT Fibernet – Duplicate Payment (VP-2026/009)</td>
+          <td class="amt">₹4,500.00</td>
+          <td class="amt">—</td>
+          <td><span class="badge" style="background:#e53e3e">Type A</span></td>
+          <td>Duplicate entry in Zoho <span class="urgent">⚠ Urgent</span></td>
+          <td><ul class="path"><li>In bank: NO</li><li>In Zoho: YES</li><li>Cheque/deposit near period-end: NO</li><li>Possible duplicate entry: YES</li></ul></td>
+          <td class="action">Reverse/delete duplicate entry. Verify original entry is correct before reversing.</td>
+        </tr>
+        <tr>
+          <td class="num">03</td>
+          <td>31/01/2026</td>
+          <td class="desc">Credit Interest – January 2026</td>
+          <td class="amt">—</td>
+          <td class="amt">₹412.00</td>
+          <td><span class="badge" style="background:#e53e3e">Type A</span></td>
+          <td>Missing bank-originated entry in Zoho <span class="urgent">⚠ Urgent</span></td>
+          <td><ul class="path"><li>In bank: YES</li><li>In Zoho: NO</li><li>Prior-period item: NO</li><li>Bank-generated entry (interest/charges): YES</li></ul></td>
+          <td class="action">Dr/Cr HDFC Current A/c ↔ Cr/Dr Interest Income or Bank Charges Expense.</td>
+        </tr>
+        <tr>
+          <td class="num">04</td>
+          <td>31/01/2026</td>
+          <td class="desc">Bank Charges – QTR Maintenance + GST (Jan)</td>
+          <td class="amt">—</td>
+          <td class="amt">₹472.00</td>
+          <td><span class="badge" style="background:#e53e3e">Type A</span></td>
+          <td>Missing bank-originated entry in Zoho <span class="urgent">⚠ Urgent</span></td>
+          <td><ul class="path"><li>In bank: YES</li><li>In Zoho: NO</li><li>Prior-period item: NO</li><li>Bank-generated entry (interest/charges): YES</li></ul></td>
+          <td class="action">Dr/Cr HDFC Current A/c ↔ Cr/Dr Interest Income or Bank Charges Expense.</td>
+        </tr>
+        <tr>
+          <td class="num">05</td>
+          <td>11/01/2026</td>
+          <td class="desc">Mahadev Provisions – Cheque Deposit</td>
+          <td class="amt">₹42,600.00</td>
+          <td class="amt">₹42,600.00</td>
+          <td><span class="badge" style="background:#276749">Match</span></td>
+          <td>No discrepancy </td>
+          <td><ul class="path"><li>In bank: YES</li><li>In Zoho: YES</li><li>Prior-period item: NO</li><li>Amounts match: YES</li><li>Dates match (within 3 days): YES</li></ul></td>
+          <td class="action">None required.</td>
+        </tr>
+        <tr>
+          <td class="num">06</td>
+          <td>05/02/2026</td>
+          <td class="desc">Office Rent – Ravi Menon (February SI)</td>
+          <td class="amt">—</td>
+          <td class="amt">₹45,000.00</td>
+          <td><span class="badge" style="background:#e53e3e">Type A</span></td>
+          <td>Missing standing instruction entry in Zoho <span class="urgent">⚠ Urgent</span></td>
+          <td><ul class="path"><li>In bank: YES</li><li>In Zoho: NO</li><li>Prior-period item: NO</li><li>Bank-generated entry: NO</li><li>Recurring standing instruction: YES</li></ul></td>
+          <td class="action">Post missing journal entry. Add SI to monthly verification checklist.</td>
+        </tr>
+        <tr>
+          <td class="num">07</td>
+          <td>17/02/2026</td>
+          <td class="desc">Packaging Solutions India – NEFT</td>
+          <td class="amt">₹36,800.00</td>
+          <td class="amt">₹38,600.00</td>
+          <td><span class="badge" style="background:#e53e3e">Type A</span></td>
+          <td>Wrong amount in Zoho (diff: ₹1,800.00) <span class="urgent">⚠ Urgent</span></td>
+          <td><ul class="path"><li>In bank: YES</li><li>In Zoho: YES</li><li>Prior-period item: NO</li><li>Amounts match: NO</li><li>Confirmed bank error: NO</li></ul></td>
+          <td class="action">Correct amount in Zoho to match bank debit/credit. Verify against original invoice/contract.</td>
+        </tr>
+        <tr>
+          <td class="num">08</td>
+          <td>28/02/2026</td>
+          <td class="desc">Credit Interest – February 2026</td>
+          <td class="amt">—</td>
+          <td class="amt">₹385.00</td>
+          <td><span class="badge" style="background:#e53e3e">Type A</span></td>
+          <td>Missing bank-originated entry in Zoho <span class="urgent">⚠ Urgent</span></td>
+          <td><ul class="path"><li>In bank: YES</li><li>In Zoho: NO</li><li>Prior-period item: NO</li><li>Bank-generated entry (interest/charges): YES</li></ul></td>
+          <td class="action">Dr/Cr HDFC Current A/c ↔ Cr/Dr Interest Income or Bank Charges Expense.</td>
+        </tr>
+        <tr>
+          <td class="num">09</td>
+          <td>22/02/2026</td>
+          <td class="desc">Monsoon Hotels – Cheque Deposit</td>
+          <td class="amt">₹215,300.00</td>
+          <td class="amt">₹215,300.00</td>
+          <td><span class="badge" style="background:#276749">Match</span></td>
+          <td>No discrepancy </td>
+          <td><ul class="path"><li>In bank: YES</li><li>In Zoho: YES</li><li>Prior-period item: NO</li><li>Amounts match: YES</li><li>Dates match (within 3 days): YES</li></ul></td>
+          <td class="action">None required.</td>
+        </tr>
+        <tr>
+          <td class="num">10</td>
+          <td>28/03/2026</td>
+          <td class="desc">Darjeeling Highland Tea – Cheque Issued</td>
+          <td class="amt">₹22,500.00</td>
+          <td class="amt">—</td>
+          <td><span class="badge" style="background:#d69e2e">Type C</span></td>
+          <td>Outstanding / uncleared item </td>
+          <td><ul class="path"><li>In bank: NO</li><li>In Zoho: YES</li><li>Cheque/deposit near period-end: YES</li></ul></td>
+          <td class="action">Disclose as outstanding item in BRS. Verify clearance in next statement.</td>
+        </tr>
+        <tr>
+          <td class="num">11</td>
+          <td>31/03/2026</td>
+          <td class="desc">Credit Interest – March 2026</td>
+          <td class="amt">—</td>
+          <td class="amt">₹428.00</td>
+          <td><span class="badge" style="background:#e53e3e">Type A</span></td>
+          <td>Missing bank-originated entry in Zoho <span class="urgent">⚠ Urgent</span></td>
+          <td><ul class="path"><li>In bank: YES</li><li>In Zoho: NO</li><li>Prior-period item: NO</li><li>Bank-generated entry (interest/charges): YES</li></ul></td>
+          <td class="action">Dr/Cr HDFC Current A/c ↔ Cr/Dr Interest Income or Bank Charges Expense.</td>
+        </tr>
+        <tr>
+          <td class="num">12</td>
+          <td>31/03/2026</td>
+          <td class="desc">Bank Charges – QTR Maintenance + GST (Mar)</td>
+          <td class="amt">—</td>
+          <td class="amt">₹590.00</td>
+          <td><span class="badge" style="background:#e53e3e">Type A</span></td>
+          <td>Missing bank-originated entry in Zoho <span class="urgent">⚠ Urgent</span></td>
+          <td><ul class="path"><li>In bank: YES</li><li>In Zoho: NO</li><li>Prior-period item: NO</li><li>Bank-generated entry (interest/charges): YES</li></ul></td>
+          <td class="action">Dr/Cr HDFC Current A/c ↔ Cr/Dr Interest Income or Bank Charges Expense.</td>
+        </tr></tbody>
+  </table>
+
+  <footer>Deterministic rule-based classifier &nbsp;|&nbsp; Arka Tea Traders BRS Tool</footer>
+</body>
+</html>
